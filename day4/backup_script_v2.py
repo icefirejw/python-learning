@@ -16,7 +16,8 @@ comment = raw_input('Enter a comment --> ')
 if len(comment) == 0: # check if a comment was entered
     target = today + os.sep + now + '.zip' 
 else:
-    target = today + os.sep + now + '_' + \ comment.replace(' ', '_') + '.zip'
+    target = today + os.sep + now + '_' + \
+            comment.replace(' ', '_') + '.zip'
 # Notice the backslash!
 # Create the subdirectory if it isn't already there
 if not os.path.exists(today):
