@@ -22,9 +22,9 @@ def guessnum(num, numrag, count):
         print('keep trying')
         return False
 
-numrange = 60
+numrange = 50
 number = random.randint(1,numrange)
-guessnum(number, numrange, 5)
+guessnum(number, numrange, 10)
 
 
 
