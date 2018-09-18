@@ -1,10 +1,8 @@
-#!/usr/bin/python
-
 
 def TestFor(n):
-    print "test loop for %s" % n
+    print ("test loop for %s" % n)
     for i in range(1, n):
-        print i
+        print (i)
     return
 
 

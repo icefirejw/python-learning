@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # Filename: backup_ver4.py
 import os
 import time
@@ -12,7 +11,7 @@ today = target_dir + time.strftime('%Y%m%d')
 # The current time is the name of the zip archive
 now = time.strftime('%H%M%S')
 # Take a comment from the user to create the name of the zip file
-comment = raw_input('Enter a comment --> ')
+comment = input('Enter a comment --> ')
 if len(comment) == 0: # check if a comment was entered
     target = today + os.sep + now + '.zip' 
 else:
@@ -28,7 +27,7 @@ print 'Successfully created directory', today
 zip_command = "zip -qr '%s' %s" % (target, ' '.join(source))
 # Run the backup
 if os.system(zip_command) == 0:
-    print 'Successful backup to', target
+    print ('Successful backup to', target)
 else:
     print 'Backup FAILED'
     

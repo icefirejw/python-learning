@@ -1,10 +1,8 @@
-#!/usr/bin/python
-
 import sys
 
-print 'The command line arguments are:'
+print ('The command line arguments are:')
 for i in sys.argv:
-    print i
+    print (i)
 
-print '\nThe python system path is ',sys.path,'\n'
+print ('\nThe python system path is ',sys.path,'\n')
 

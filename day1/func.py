@@ -1,4 +1,3 @@
-#!/usr/bin/python
 
 def MaxNum(a,b):
     if (a>b):
@@ -6,6 +5,6 @@ def MaxNum(a,b):
     else:
         return b
 
-print MaxNum(3,5)
+print (MaxNum(3,5))
 
 

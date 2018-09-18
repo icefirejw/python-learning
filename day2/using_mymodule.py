@@ -1,4 +1,3 @@
-#!/usr/bin/python
 #File: using_mymodule.py
 #this is a using my module domo
 
