@@ -3,6 +3,6 @@
 
 import mymodule
 
-print mymodule.max_num(3,4)
-print mymodule.min_num(3,4)
+print(mymodule.max_num(3,4))
+print(mymodule.min_num(3,4))
 

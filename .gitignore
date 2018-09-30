@@ -9,6 +9,7 @@ Release/
 gen/
 .idea/
 .vs/
+__pycache__/
 
 #ignore objects and archives, anywhere in the tree.
 *.[oa]
