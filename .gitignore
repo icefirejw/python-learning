@@ -16,6 +16,8 @@ __pycache__/
 *.obj
 *.[bB]
 *.pyc
+*.swp
+
 
 #ignore system temp files
 *~
