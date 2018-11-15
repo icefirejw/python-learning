@@ -7,6 +7,10 @@
 '''
 import pygame
 
+WIN_WIDTH = 480
+WIN_HEIGHT = 700
+FRAME_PER_SEC = 60
+
 class PlaneSprites(pygame.sprite.Sprite):
     def __init__(self, image_name, speed = 1):
 
