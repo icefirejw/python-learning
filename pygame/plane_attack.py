@@ -9,7 +9,7 @@ class PlaneGame(object):
         # 初始化pygame
         pygame.init()
         # 定义窗口
-        self.screen = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
+        self.screen = pygame.display.set_mode(SCREEN_REC.size)
         # 定义循环时钟
         self.clock = pygame.time.Clock()
         # 定义图像精灵和精灵组
@@ -32,6 +32,10 @@ class PlaneGame(object):
     def __create_sprites(self):
         '''创建游戏角色图像精灵和精灵组'''
         print("create sprints...")
+        bg1 = Background("./plane_images/background.png")
+        bg2.rect.y = -bg2.rect.height
+        self.bg_sprites_group = pygame.sprite.Group(bg1,bg2)
+
 
     def __event_handler(self):
         for event in pygame.event.get():
@@ -42,6 +46,8 @@ class PlaneGame(object):
 
     def __update_sprites(self):
         '''使用sprite模块,更新角色位置和信息'''
+        self.bg_sprites_group.draw(self.screen)
+
         pass
 
     def __check_collision(self):

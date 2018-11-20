@@ -7,8 +7,8 @@
 '''
 import pygame
 
-WIN_WIDTH = 480
-WIN_HEIGHT = 700
+# define the screen size
+SCREEN_REC = pygame.rect.Rect(0,0,480,700)
 FRAME_PER_SEC = 60
 
 class PlaneSprites(pygame.sprite.Sprite):
@@ -32,3 +32,14 @@ class PlaneSprites(pygame.sprite.Sprite):
         更新图像位置
         '''
         self.rect.y += self.speed
+
+class Background(PlaneSprites):
+    '''背景图像的精灵类'''
+
+    def update(self):
+        # 1. 调用父类的update函数，已实现y移动方法
+        super().update()
+
+        # 2. 判断图像是否移除了屏幕，如果移出了屏幕，则到屏幕的最上方
+        if self.rect.y >= SCREEN_REC.height:
+            self.rect.y = -self.rect.height
