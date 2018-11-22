@@ -32,9 +32,8 @@ class PlaneGame(object):
     def __create_sprites(self):
         '''创建游戏角色图像精灵和精灵组'''
         print("create sprints...")
-        bg1 = Background("./plane_images/background.png")
-        bg2 = Background("./plane_images/background.png")
-        bg2.rect.y = -bg2.rect.height
+        bg1 = Background()
+        bg2 = Background(True)
         self.bg_sprites_group = pygame.sprite.Group(bg1,bg2)
 
 

@@ -11,7 +11,7 @@ import pygame
 SCREEN_REC = pygame.rect.Rect(0,0,480,700)
 FRAME_PER_SEC = 60
 
-class PlaneSprites(pygame.sprite.Sprite):
+class GameSprite(pygame.sprite.Sprite):
     def __init__(self, image_name, speed = 1):
 
         # 一定要先通过父类的初始化函数来继承
@@ -33,13 +33,18 @@ class PlaneSprites(pygame.sprite.Sprite):
         '''
         self.rect.y += self.speed
 
-class Background(PlaneSprites):
+class Background(GameSprite):
     '''背景图像的精灵类'''
+    def __init__(self, is_alt=False):
+        super().__init__("./plane_images/background.png")
+        if is_alt:
+            #如果是填充的图片，则需要将图片上移到原来图片的正上方进行拼接
+            self.rect.bottom = 0
 
     def update(self):
         # 1. 调用父类的update函数，已实现y移动方法
         super().update()
 
-        # 2. 判断图像是否移除了屏幕，如果移出了屏幕，则到屏幕的最上方
+        # 2. 判断图像是否移出了屏幕，如果移出了屏幕，则返回到屏幕的最上方
         if self.rect.y >= SCREEN_REC.height:
             self.rect.y = -self.rect.height
