@@ -1,5 +1,5 @@
-# install the modules
-## 1. how to install
+# 1. install the modules
+## (1). how to install
 > pip install requests selenium beautifulsoup4 pyquery pymysql pymongo redis flask django jupyter
 - requests: Requests is an elegant and simple HTTP library for Python, built for human beings
 - selenium: The selenium package is used to automate web browser interaction from Python.
